@@ -1,0 +1,178 @@
+{
+  "UXML Template": {
+    "prefix": "uxml-template",
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "<ui:UXML xmlns:ui=\"UnityEngine.UIElements\" xmlns:uie=\"UnityEditor.UIElements\">",
+      "    $0",
+      "</ui:UXML>"
+    ],
+    "description": "Basic UXML template structure"
+  },
+  "Visual Element": {
+    "prefix": "ve",
+    "body": [
+      "<ui:VisualElement name=\"${1:elementName}\" class=\"${2:className}\">",
+      "    $0",
+      "</ui:VisualElement>"
+    ],
+    "description": "Create a VisualElement"
+  },
+  "Label": {
+    "prefix": "label",
+    "body": ["<ui:Label text=\"${1:Label Text}\" name=\"${2:labelName}\" />"],
+    "description": "Create a Label"
+  },
+  "Button": {
+    "prefix": "button",
+    "body": ["<ui:Button text=\"${1:Button}\" name=\"${2:buttonName}\" />"],
+    "description": "Create a Button"
+  },
+  "TextField": {
+    "prefix": "textfield",
+    "body": [
+      "<ui:TextField label=\"${1:Label}\" name=\"${2:textFieldName}\" />"
+    ],
+    "description": "Create a TextField"
+  },
+  "Toggle": {
+    "prefix": "toggle",
+    "body": ["<ui:Toggle label=\"${1:Label}\" name=\"${2:toggleName}\" />"],
+    "description": "Create a Toggle"
+  },
+  "Slider": {
+    "prefix": "slider",
+    "body": [
+      "<ui:Slider label=\"${1:Label}\" name=\"${2:sliderName}\" low-value=\"${3:0}\" high-value=\"${4:100}\" />"
+    ],
+    "description": "Create a Slider"
+  },
+  "Image": {
+    "prefix": "image",
+    "body": ["<ui:Image name=\"${1:imageName}\" />"],
+    "description": "Create an Image element"
+  },
+  "ScrollView": {
+    "prefix": "scrollview",
+    "body": [
+      "<ui:ScrollView name=\"${1:scrollViewName}\">",
+      "    $0",
+      "</ui:ScrollView>"
+    ],
+    "description": "Create a ScrollView"
+  },
+  "ListView": {
+    "prefix": "listview",
+    "body": ["<ui:ListView name=\"${1:listViewName}\" />$0"],
+    "description": "Create a ListView"
+  },
+  "Foldout": {
+    "prefix": "foldout",
+    "body": [
+      "<ui:Foldout text=\"${1:Foldout Text}\" name=\"${2:foldoutName}\">",
+      "    $0",
+      "</ui:Foldout>"
+    ],
+    "description": "Create a Foldout"
+  },
+  "GroupBox": {
+    "prefix": "groupbox",
+    "body": [
+      "<ui:GroupBox text=\"${1:Group Title}\" name=\"${2:groupBoxName}\">",
+      "    $0",
+      "</ui:GroupBox>"
+    ],
+    "description": "Create a GroupBox"
+  },
+  "DropdownField": {
+    "prefix": "dropdown",
+    "body": [
+      "<ui:DropdownField label=\"${1:Label}\" name=\"${2:dropdownName}\" />$0"
+    ],
+    "description": "Create a DropdownField"
+  },
+  "RadioButton": {
+    "prefix": "radio",
+    "body": [
+      "<ui:RadioButton label=\"${1:Label}\" name=\"${2:radioName}\" />$0"
+    ],
+    "description": "Create a RadioButton"
+  },
+  "RadioButtonGroup": {
+    "prefix": "radiogroup",
+    "body": [
+      "<ui:RadioButtonGroup label=\"${1:Label}\" name=\"${2:radioGroupName}\">",
+      "    $0",
+      "</ui:RadioButtonGroup>"
+    ],
+    "description": "Create a RadioButtonGroup"
+  },
+  "MinMaxSlider": {
+    "prefix": "minmax",
+    "body": [
+      "<ui:MinMaxSlider label=\"${1:Label}\" name=\"${2:minMaxName}\" min-value=\"${3:0}\" max-value=\"${4:100}\" low-limit=\"${5:0}\" high-limit=\"${6:100}\" />"
+    ],
+    "description": "Create a MinMaxSlider"
+  },
+  "Template": {
+    "prefix": "template",
+    "body": [
+      "<ui:Template name=\"${1:templateName}\" src=\"${2:path/to/template.uxml}\" />"
+    ],
+    "description": "Reference another UXML template"
+  },
+  "Instance": {
+    "prefix": "instance",
+    "body": [
+      "<ui:Instance template=\"${1:templateName}\" name=\"${2:instanceName}\" />"
+    ],
+    "description": "Create an instance of a template"
+  },
+  "Style": {
+    "prefix": "style",
+    "body": ["<Style src=\"${1:path/to/styles.uss}\" />"],
+    "description": "Reference a USS stylesheet"
+  },
+  "IntegerField": {
+    "prefix": "intfield",
+    "body": [
+      "<ui:IntegerField label=\"${1:Label}\" name=\"${2:intFieldName}\" />$0"
+    ],
+    "description": "Create an IntegerField"
+  },
+  "FloatField": {
+    "prefix": "floatfield",
+    "body": [
+      "<ui:FloatField label=\"${1:Label}\" name=\"${2:floatFieldName}\" />$0"
+    ],
+    "description": "Create a FloatField"
+  },
+  "Vector2Field": {
+    "prefix": "vec2",
+    "body": [
+      "<ui:Vector2Field label=\"${1:Label}\" name=\"${2:vector2Name}\" />$0"
+    ],
+    "description": "Create a Vector2Field"
+  },
+  "Vector3Field": {
+    "prefix": "vec3",
+    "body": [
+      "<ui:Vector3Field label=\"${1:Label}\" name=\"${2:vector3Name}\" />$0"
+    ],
+    "description": "Create a Vector3Field"
+  },
+  "ColorField": {
+    "prefix": "color",
+    "body": [
+      "<ui:ColorField label=\"${1:Label}\" name=\"${2:colorFieldName}\" />$0"
+    ],
+    "description": "Create a ColorField"
+  },
+  "ProgressBar": {
+    "prefix": "progress",
+    "body": [
+      "<ui:ProgressBar name=\"${1:progressName}\" title=\"${2:Progress}\" />$0"
+    ],
+    "description": "Create a ProgressBar"
+  }
+}

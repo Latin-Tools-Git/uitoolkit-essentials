@@ -1,0 +1,134 @@
+{
+  "name": "uitoolkit-essentials",
+  "displayName": "UIToolkit Essentials",
+  "description": "Smart snippets and automatic formatting for Unity UI Toolkit (UXML & USS).",
+  "version": "0.0.1",
+  "publisher": "LatinTools",
+  "author": {
+    "name": "Latin Tools"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Latin-Tools-Git/uitoolkit-essentials"
+  },
+  "bugs": {
+    "url": "https://github.com/Latin-Tools-Git/uitoolkit-essentials/issues"
+  },
+  "icon": "src/imgs/app-logo.webp",
+  "engines": {
+    "vscode": "^1.105.0"
+  },
+  "categories": [
+    "Formatters",
+    "Snippets",
+    "Programming Languages"
+  ],
+  "keywords": [
+    "Unity",
+    "UI Toolkit",
+    "UXML",
+    "USS",
+    "formatter",
+    "snippets"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "uitoolkit-essentials.formatUXML",
+        "title": "Format UXML Document",
+        "category": "UIToolkit"
+      },
+      {
+        "command": "uitoolkit-essentials.formatUSS",
+        "title": "Format USS Document",
+        "category": "UIToolkit"
+      }
+    ],
+    "languages": [
+      {
+        "id": "xml",
+        "extensions": [
+          ".uxml"
+        ],
+        "aliases": [
+          "UXML",
+          "Unity UI Toolkit"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "css",
+        "extensions": [
+          ".uss"
+        ],
+        "aliases": [
+          "USS",
+          "Unity Style Sheets"
+        ]
+      }
+    ],
+    "snippets": [
+      {
+        "language": "xml",
+        "path": "./snippets/uxml.json"
+      },
+      {
+        "language": "css",
+        "path": "./snippets/uss.json"
+      }
+    ],
+    "configuration": {
+      "title": "UIToolkit Essentials",
+      "properties": {
+        "uitoolkit-essentials.uxml.indentSize": {
+          "type": "number",
+          "default": 4,
+          "description": "Number of spaces for UXML indentation"
+        },
+        "uitoolkit-essentials.uss.indentSize": {
+          "type": "number",
+          "default": 4,
+          "description": "Number of spaces for USS indentation"
+        },
+        "uitoolkit-essentials.formatOnSave": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically format UXML and USS files on save"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "npm run check-types && npm run lint && node esbuild.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package": "npm run check-types && npm run lint && node esbuild.js --production",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.105.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@typescript-eslint/eslint-plugin": "^8.45.0",
+    "@typescript-eslint/parser": "^8.45.0",
+    "eslint": "^9.36.0",
+    "esbuild": "^0.25.10",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.9.3",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
+  },
+  "license": "MIT",
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  }
+}

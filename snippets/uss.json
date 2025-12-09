@@ -1,0 +1,323 @@
+{
+  "Flex Direction": {
+    "prefix": "flex-direction",
+    "body": ["flex-direction: ${1|row,row-reverse,column,column-reverse|};"],
+    "description": "Set flex direction"
+  },
+  "Flex Wrap": {
+    "prefix": "flex-wrap",
+    "body": ["flex-wrap: ${1|nowrap,wrap,wrap-reverse|};"],
+    "description": "Set flex wrap"
+  },
+  "Flex Basis": {
+    "prefix": "flex-basis",
+    "body": ["flex-basis: ${1:auto};"],
+    "description": "Set flex basis"
+  },
+  "Flex Grow": {
+    "prefix": "flex-grow",
+    "body": ["flex-grow: ${1:1};"],
+    "description": "Set flex grow"
+  },
+  "Flex Shrink": {
+    "prefix": "flex-shrink",
+    "body": ["flex-shrink: ${1:1};"],
+    "description": "Set flex shrink"
+  },
+  "Align Items": {
+    "prefix": "align-items",
+    "body": ["align-items: ${1|flex-start,flex-end,center,stretch,auto|};"],
+    "description": "Set align items"
+  },
+  "Align Self": {
+    "prefix": "align-self",
+    "body": ["align-self: ${1|auto,flex-start,flex-end,center,stretch|};"],
+    "description": "Set align self"
+  },
+  "Align Content": {
+    "prefix": "align-content",
+    "body": [
+      "align-content: ${1|flex-start,flex-end,center,stretch,space-between,space-around|};"
+    ],
+    "description": "Set align content"
+  },
+  "Justify Content": {
+    "prefix": "justify-content",
+    "body": [
+      "justify-content: ${1|flex-start,flex-end,center,space-between,space-around|};"
+    ],
+    "description": "Set justify content"
+  },
+  "Background Color": {
+    "prefix": "bg-color",
+    "body": ["background-color: ${1:rgb(255, 255, 255)};"],
+    "description": "Set background color"
+  },
+  "Background Image": {
+    "prefix": "bg-image",
+    "body": ["background-image: url('${1:path/to/image.png}');"],
+    "description": "Set background image"
+  },
+  "Background Size": {
+    "prefix": "bg-size",
+    "body": [
+      "-unity-background-scale-mode: ${1|stretch-to-fill,scale-and-crop,scale-to-fit|};"
+    ],
+    "description": "Set background scale mode"
+  },
+  "Background Image Tint": {
+    "prefix": "bg-tint",
+    "body": ["-unity-background-image-tint-color: ${1:rgb(255, 255, 255)};"],
+    "description": "Set background image tint color"
+  },
+  "Color": {
+    "prefix": "color",
+    "body": ["color: ${1:rgb(255, 255, 255)};"],
+    "description": "Set text color"
+  },
+  "Width": {
+    "prefix": "width",
+    "body": ["width: ${1:100}${2|px,%,auto|};"],
+    "description": "Set width"
+  },
+  "Height": {
+    "prefix": "height",
+    "body": ["height: ${1:100}${2|px,%,auto|};"],
+    "description": "Set height"
+  },
+  "Min Width": {
+    "prefix": "min-width",
+    "body": ["min-width: ${1:100}px;"],
+    "description": "Set minimum width"
+  },
+  "Min Height": {
+    "prefix": "min-height",
+    "body": ["min-height: ${1:100}px;"],
+    "description": "Set minimum height"
+  },
+  "Max Width": {
+    "prefix": "max-width",
+    "body": ["max-width: ${1:100}px;"],
+    "description": "Set maximum width"
+  },
+  "Max Height": {
+    "prefix": "max-height",
+    "body": ["max-height: ${1:100}px;"],
+    "description": "Set maximum height"
+  },
+  "Margin": {
+    "prefix": "margin",
+    "body": ["margin: ${1:10}px;"],
+    "description": "Set margin"
+  },
+  "Margin Detailed": {
+    "prefix": "margin-all",
+    "body": [
+      "margin-top: ${1:10}px;",
+      "margin-right: ${2:10}px;",
+      "margin-bottom: ${3:10}px;",
+      "margin-left: ${4:10}px;"
+    ],
+    "description": "Set all margin sides"
+  },
+  "Padding": {
+    "prefix": "padding",
+    "body": ["padding: ${1:10}px;"],
+    "description": "Set padding"
+  },
+  "Padding Detailed": {
+    "prefix": "padding-all",
+    "body": [
+      "padding-top: ${1:10}px;",
+      "padding-right: ${2:10}px;",
+      "padding-bottom: ${3:10}px;",
+      "padding-left: ${4:10}px;"
+    ],
+    "description": "Set all padding sides"
+  },
+  "Border Width": {
+    "prefix": "border-width",
+    "body": ["border-width: ${1:1}px;"],
+    "description": "Set border width"
+  },
+  "Border Color": {
+    "prefix": "border-color",
+    "body": ["border-color: ${1:rgb(0, 0, 0)};"],
+    "description": "Set border color"
+  },
+  "Border Radius": {
+    "prefix": "border-radius",
+    "body": ["border-radius: ${1:5}px;"],
+    "description": "Set border radius"
+  },
+  "Border Detailed": {
+    "prefix": "border-all",
+    "body": [
+      "border-top-width: ${1:1}px;",
+      "border-right-width: ${2:1}px;",
+      "border-bottom-width: ${3:1}px;",
+      "border-left-width: ${4:1}px;",
+      "border-color: ${5:rgb(0, 0, 0)};"
+    ],
+    "description": "Set all border properties"
+  },
+  "Border Radius Detailed": {
+    "prefix": "border-radius-all",
+    "body": [
+      "border-top-left-radius: ${1:5}px;",
+      "border-top-right-radius: ${2:5}px;",
+      "border-bottom-right-radius: ${3:5}px;",
+      "border-bottom-left-radius: ${4:5}px;"
+    ],
+    "description": "Set all border radius corners"
+  },
+  "Font Size": {
+    "prefix": "font-size",
+    "body": ["font-size: ${1:14}px;"],
+    "description": "Set font size"
+  },
+  "Text Align": {
+    "prefix": "text-align",
+    "body": [
+      "-unity-text-align: ${1|upper-left,upper-center,upper-right,middle-left,middle-center,middle-right,lower-left,lower-center,lower-right|};"
+    ],
+    "description": "Set text alignment"
+  },
+  "Text Overflow": {
+    "prefix": "text-overflow",
+    "body": ["text-overflow: ${1|clip,ellipsis|};"],
+    "description": "Set text overflow behavior"
+  },
+  "White Space": {
+    "prefix": "white-space",
+    "body": ["white-space: ${1|normal,nowrap|};"],
+    "description": "Set white space handling"
+  },
+  "Letter Spacing": {
+    "prefix": "letter-spacing",
+    "body": ["letter-spacing: ${1:0}px;"],
+    "description": "Set letter spacing"
+  },
+  "Opacity": {
+    "prefix": "opacity",
+    "body": ["opacity: ${1:1};"],
+    "description": "Set opacity (0-1)"
+  },
+  "Display": {
+    "prefix": "display",
+    "body": ["display: ${1|flex,none|};"],
+    "description": "Set display mode"
+  },
+  "Visibility": {
+    "prefix": "visibility",
+    "body": ["visibility: ${1|visible,hidden|};"],
+    "description": "Set visibility"
+  },
+  "Position": {
+    "prefix": "position",
+    "body": ["position: ${1|relative,absolute|};"],
+    "description": "Set position type"
+  },
+  "Position Absolute": {
+    "prefix": "pos-abs",
+    "body": [
+      "position: absolute;",
+      "top: ${1:0}px;",
+      "right: ${2:0}px;",
+      "bottom: ${3:0}px;",
+      "left: ${4:0}px;"
+    ],
+    "description": "Set absolute positioning with all sides"
+  },
+  "Top": {
+    "prefix": "top",
+    "body": ["top: ${1:0}${2|px,%,auto|};"],
+    "description": "Set top position"
+  },
+  "Right": {
+    "prefix": "right",
+    "body": ["right: ${1:0}${2|px,%,auto|};"],
+    "description": "Set right position"
+  },
+  "Bottom": {
+    "prefix": "bottom",
+    "body": ["bottom: ${1:0}${2|px,%,auto|};"],
+    "description": "Set bottom position"
+  },
+  "Left": {
+    "prefix": "left",
+    "body": ["left: ${1:0}${2|px,%,auto|};"],
+    "description": "Set left position"
+  },
+  "Overflow": {
+    "prefix": "overflow",
+    "body": ["overflow: ${1|visible,hidden|};"],
+    "description": "Set overflow behavior"
+  },
+  "Rotate": {
+    "prefix": "rotate",
+    "body": ["rotate: ${1:0}deg;"],
+    "description": "Set rotation"
+  },
+  "Scale": {
+    "prefix": "scale",
+    "body": ["scale: ${1:1} ${2:1};"],
+    "description": "Set scale (x y)"
+  },
+  "Translate": {
+    "prefix": "translate",
+    "body": ["translate: ${1:0}px ${2:0}px;"],
+    "description": "Set translation (x y)"
+  },
+  "Transform Origin": {
+    "prefix": "transform-origin",
+    "body": [
+      "transform-origin: ${1|center,top,bottom,left,right,top-left,top-right,bottom-left,bottom-right|};"
+    ],
+    "description": "Set transform origin"
+  },
+  "Transition": {
+    "prefix": "transition",
+    "body": [
+      "transition: ${1:property} ${2:0.3}s ${3|ease,linear,ease-in,ease-out,ease-in-out|};"
+    ],
+    "description": "Create a transition"
+  },
+  "Transition Multiple": {
+    "prefix": "transition-multi",
+    "body": [
+      "transition: ${1:property1} ${2:0.3}s ${3|ease,linear,ease-in,ease-out,ease-in-out|}, ${4:property2} ${5:0.3}s ${6|ease,linear,ease-in,ease-out,ease-in-out|};"
+    ],
+    "description": "Create multiple transitions"
+  },
+  "Hover State": {
+    "prefix": "hover",
+    "body": [".${1:className}:hover {", "    $0", "}"],
+    "description": "Create hover state"
+  },
+  "Active State": {
+    "prefix": "active",
+    "body": [".${1:className}:active {", "    $0", "}"],
+    "description": "Create active state"
+  },
+  "Focus State": {
+    "prefix": "focus",
+    "body": [".${1:className}:focus {", "    $0", "}"],
+    "description": "Create focus state"
+  },
+  "Slice Properties": {
+    "prefix": "slice",
+    "body": [
+      "-unity-slice-left: ${1:10};",
+      "-unity-slice-top: ${2:10};",
+      "-unity-slice-right: ${3:10};",
+      "-unity-slice-bottom: ${4:10};"
+    ],
+    "description": "Set 9-slice properties"
+  },
+  "Paragraph Spacing": {
+    "prefix": "paragraph-spacing",
+    "body": ["-unity-paragraph-spacing: ${1:0}px;"],
+    "description": "Set paragraph spacing"
+  }
+}

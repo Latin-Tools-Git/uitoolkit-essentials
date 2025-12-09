@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+<ui:VisualElement name="container" class="main-container">
+<ui:Label text="Welcome to UI Toolkit" name="title-label" class="title" />
+<ui:Button text="Click Me" name="action-button" />
+<ui:TextField label="Enter Name" name="name-field" />
+<ui:Toggle label="Enable Feature" name="feature-toggle" />
+<ui:Slider label="Volume" name="volume-slider" low-value="0" high-value="100" />
+<ui:ScrollView name="content-scroll">
+<ui:Foldout text="Settings" name="settings-foldout">
+<ui:IntegerField label="Max Items" name="max-items" />
+<ui:ColorField label="Theme Color" name="theme-color" />
+</ui:Foldout>
+</ui:ScrollView>
+</ui:VisualElement>
+</ui:UXML>
