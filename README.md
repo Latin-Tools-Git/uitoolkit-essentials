@@ -12,6 +12,7 @@ Streamline your Unity UI Toolkit development workflow with intelligent code form
 ## ✨ Features
 
 ### 🎨 **Automatic Formatting**
+
 - **UXML Formatter**: Clean and properly indent your Unity UI Toolkit XML files
 - **USS Formatter**: Format Unity Style Sheets with consistent spacing and structure
 - **Format on Save**: Optional automatic formatting when you save files
@@ -20,6 +21,7 @@ Streamline your Unity UI Toolkit development workflow with intelligent code form
 ### ⚡ **Smart Snippets**
 
 #### UXML Snippets (20+ components)
+
 Quickly insert UI elements with intelligent placeholders:
 
 - `uxml-template` - Complete UXML file template
@@ -44,6 +46,7 @@ Quickly insert UI elements with intelligent placeholders:
 - And many more...
 
 #### USS Snippets (40+ properties)
+
 Accelerate styling with ready-to-use USS properties:
 
 - `class` - Class selector
@@ -62,36 +65,6 @@ Accelerate styling with ready-to-use USS properties:
 
 ---
 
-### Usage
-
-#### Formatting Files
-
-**Option 1: Keyboard Shortcut**
-- Open a `.uxml` or `.uss` file
-- Press `Shift+Alt+F` (Windows/Linux) or `Shift+Option+F` (Mac)
-
-**Option 2: Command Palette**
-- Press `Ctrl+Shift+P` / `Cmd+Shift+P`
-- Type "Format Document"
-- Select `Format UXML Document` or `Format USS Document`
-
-**Option 3: Format on Save**
-Enable automatic formatting in your settings:
-```json
-{
-  "uitoolkit-essentials.formatOnSave": true
-}
-```
-
-#### Using Snippets
-
-1. Create or open a `.uxml` or `.uss` file
-2. Start typing a snippet prefix (e.g., `button`, `class`)
-3. Press `Tab` to expand the snippet
-4. Navigate through placeholders with `Tab`
-
----
-
 ## ⚙️ Configuration
 
 Customize UIToolkit Essentials in your VS Code settings:
@@ -100,37 +73,14 @@ Customize UIToolkit Essentials in your VS Code settings:
 {
   // Number of spaces for UXML indentation
   "uitoolkit-essentials.uxml.indentSize": 4,
-  
+
   // Number of spaces for USS indentation
   "uitoolkit-essentials.uss.indentSize": 4,
-  
+
   // Automatically format files on save
   "uitoolkit-essentials.formatOnSave": false
 }
 ```
-
-### Setting Default Formatter
-
-If you have multiple formatters installed, set UIToolkit Essentials as the default for UXML and USS files:
-
-1. Open a `.uxml` file
-2. Press `Ctrl+Shift+P` / `Cmd+Shift+P`
-3. Type "Format Document With..."
-4. Select "Configure Default Formatter..."
-5. Choose "UIToolkit Essentials"
-
-Repeat for `.uss` files.
-
----
-
-## 🐛 Known Issues
-
-- First-time setup may require manually selecting UIToolkit Essentials as the default formatter
-- Some complex UXML structures may require manual formatting adjustments
-
-Report issues on [GitHub Issues](https://github.com/Latin-Tools-Git/uitoolkit-essentials/issues).
-
----
 
 ## 🤝 Contributing
 
