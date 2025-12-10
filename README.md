@@ -65,23 +65,6 @@ Accelerate styling with ready-to-use USS properties:
 
 ---
 
-## ⚙️ Configuration
-
-Customize UIToolkit Essentials in your VS Code settings:
-
-```json
-{
-  // Number of spaces for UXML indentation
-  "uitoolkit-essentials.uxml.indentSize": 4,
-
-  // Number of spaces for USS indentation
-  "uitoolkit-essentials.uss.indentSize": 4,
-
-  // Automatically format files on save
-  "uitoolkit-essentials.formatOnSave": false
-}
-```
-
 ## 🤝 Contributing
 
 Contributions are greatly appreciated. Please fork the repository and submit a pull request.

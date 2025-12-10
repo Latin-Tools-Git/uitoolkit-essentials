@@ -77,27 +77,7 @@
         "language": "uss",
         "path": "./snippets/uss.json"
       }
-    ],
-    "configuration": {
-      "title": "UIToolkit Essentials",
-      "properties": {
-        "uitoolkit-essentials.uxml.indentSize": {
-          "type": "number",
-          "default": 4,
-          "description": "Number of spaces for UXML indentation"
-        },
-        "uitoolkit-essentials.uss.indentSize": {
-          "type": "number",
-          "default": 4,
-          "description": "Number of spaces for USS indentation"
-        },
-        "uitoolkit-essentials.formatOnSave": {
-          "type": "boolean",
-          "default": false,
-          "description": "Automatically format UXML and USS files on save"
-        }
-      }
-    }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
