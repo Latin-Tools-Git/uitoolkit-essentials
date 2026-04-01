@@ -5,74 +5,41 @@ import { USSFormatter, USSRangeFormatter } from "./formatters/ussFormatter";
 export function activate(context: vscode.ExtensionContext) {
   console.log("UIToolkit Essentials extension is now active!");
 
-  // Register UXML formatter for multiple language IDs
-  const uxmlFormatter1 =
-    vscode.languages.registerDocumentFormattingEditProvider(
-      { language: "xml", pattern: "**/*.uxml" },
-      new UXMLFormatter()
-    );
+  // Define document selectors
+  const uxmlSelector: vscode.DocumentSelector = [
+    { language: "uxml" },
+    { language: "xml", pattern: "**/*.uxml" },
+    { scheme: "file", pattern: "**/*.uxml" }
+  ];
 
-  const uxmlFormatter2 =
-    vscode.languages.registerDocumentFormattingEditProvider(
-      { language: "uxml" },
-      new UXMLFormatter()
-    );
-
-  const uxmlFormatter3 =
-    vscode.languages.registerDocumentFormattingEditProvider(
-      { scheme: "file", pattern: "**/*.uxml" },
-      new UXMLFormatter()
-    );
-
-  const uxmlRangeFormatter1 =
-    vscode.languages.registerDocumentRangeFormattingEditProvider(
-      { language: "xml", pattern: "**/*.uxml" },
-      new UXMLRangeFormatter()
-    );
-
-  const uxmlRangeFormatter2 =
-    vscode.languages.registerDocumentRangeFormattingEditProvider(
-      { language: "uxml" },
-      new UXMLRangeFormatter()
-    );
-
-  const uxmlRangeFormatter3 =
-    vscode.languages.registerDocumentRangeFormattingEditProvider(
-      { scheme: "file", pattern: "**/*.uxml" },
-      new UXMLRangeFormatter()
-    );
-
-  // Register USS formatter for multiple language IDs
-  const ussFormatter1 = vscode.languages.registerDocumentFormattingEditProvider(
-    { language: "css", pattern: "**/*.uss" },
-    new USSFormatter()
-  );
-
-  const ussFormatter2 = vscode.languages.registerDocumentFormattingEditProvider(
+  const ussSelector: vscode.DocumentSelector = [
     { language: "uss" },
+    { language: "css", pattern: "**/*.uss" },
+    { scheme: "file", pattern: "**/*.uss" }
+  ];
+
+  // Register UXML formatters
+  const uxmlFormatter =
+    vscode.languages.registerDocumentFormattingEditProvider(
+      uxmlSelector,
+      new UXMLFormatter()
+    );
+
+  const uxmlRangeFormatter =
+    vscode.languages.registerDocumentRangeFormattingEditProvider(
+      uxmlSelector,
+      new UXMLRangeFormatter()
+    );
+
+  // Register USS formatters
+  const ussFormatter = vscode.languages.registerDocumentFormattingEditProvider(
+    ussSelector,
     new USSFormatter()
   );
 
-  const ussFormatter3 = vscode.languages.registerDocumentFormattingEditProvider(
-    { scheme: "file", pattern: "**/*.uss" },
-    new USSFormatter()
-  );
-
-  const ussRangeFormatter1 =
+  const ussRangeFormatter =
     vscode.languages.registerDocumentRangeFormattingEditProvider(
-      { language: "css", pattern: "**/*.uss" },
-      new USSRangeFormatter()
-    );
-
-  const ussRangeFormatter2 =
-    vscode.languages.registerDocumentRangeFormattingEditProvider(
-      { language: "uss" },
-      new USSRangeFormatter()
-    );
-
-  const ussRangeFormatter3 =
-    vscode.languages.registerDocumentRangeFormattingEditProvider(
-      { scheme: "file", pattern: "**/*.uss" },
+      ussSelector,
       new USSRangeFormatter()
     );
 
@@ -122,18 +89,10 @@ export function activate(context: vscode.ExtensionContext) {
 
   // Add all disposables to subscriptions
   context.subscriptions.push(
-    uxmlFormatter1,
-    uxmlFormatter2,
-    uxmlFormatter3,
-    uxmlRangeFormatter1,
-    uxmlRangeFormatter2,
-    uxmlRangeFormatter3,
-    ussFormatter1,
-    ussFormatter2,
-    ussFormatter3,
-    ussRangeFormatter1,
-    ussRangeFormatter2,
-    ussRangeFormatter3,
+    uxmlFormatter,
+    uxmlRangeFormatter,
+    ussFormatter,
+    ussRangeFormatter,
     formatUXMLCommand,
     formatUSSCommand
   );

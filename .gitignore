@@ -20,3 +20,4 @@ Thumbs.db
 # Env / secrets (por si tienes tokens)
 .env
 *.vsix
+TESTING.md

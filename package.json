@@ -2,7 +2,7 @@
   "name": "uitoolkit-essentials",
   "displayName": "UIToolkit Essentials",
   "description": "Smart snippets and automatic formatting for Unity UI Toolkit (UXML & USS).",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "publisher": "LatinTools",
   "author": {
     "name": "Latin Tools"
@@ -65,7 +65,8 @@
         "aliases": [
           "USS",
           "Unity Style Sheets"
-        ]
+        ],
+        "configuration": "./language-configuration-uss.json"
       }
     ],
     "snippets": [
@@ -76,8 +77,26 @@
       {
         "language": "uss",
         "path": "./snippets/uss.json"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/uxml.json"
+      },
+      {
+        "language": "css",
+        "path": "./snippets/uss.json"
       }
-    ]
+    ],
+    "configurationDefaults": {
+      "[uxml]": {
+        "editor.defaultFormatter": "LatinTools.uitoolkit-essentials",
+        "editor.formatOnSave": true
+      },
+      "[uss]": {
+        "editor.defaultFormatter": "LatinTools.uitoolkit-essentials",
+        "editor.formatOnSave": true
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
