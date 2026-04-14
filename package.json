@@ -43,6 +43,11 @@
         "command": "uitoolkit-essentials.formatUSS",
         "title": "Format USS Document",
         "category": "UIToolkit"
+      },
+      {
+        "command": "uitoolkit-essentials.initialize",
+        "title": "Initialize Scripts",
+        "category": "UIToolkit"
       }
     ],
     "languages": [
@@ -96,6 +101,25 @@
         "editor.defaultFormatter": "LatinTools.uitoolkit-essentials",
         "editor.formatOnSave": true
       }
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "uitoolkit-essentials-explorer",
+          "title": "UIToolkit",
+          "icon": "src/imgs/app-logo.webp"
+        }
+      ]
+    },
+    "views": {
+      "uitoolkit-essentials-explorer": [
+        {
+          "id": "uitoolkit-essentials-sidebar",
+          "name": "UIToolkit Essentials",
+          "type": "webview",
+          "icon": "src/imgs/app-logo.webp"
+        }
+      ]
     }
   },
   "scripts": {
@@ -129,5 +153,10 @@
   "galleryBanner": {
     "color": "#1e1e1e",
     "theme": "dark"
-  }
+  },
+  "activationEvents": [
+    "onView:uitoolkit-essentials-sidebar",
+    "onLanguage:uxml",
+    "onLanguage:uss"
+  ]
 }
